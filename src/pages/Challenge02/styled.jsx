@@ -13,4 +13,19 @@ export const Card = styled.section`
   background-color: #D9CDF7;
   display: flex;
   align-items: center;
+
+  @media (max-width: 800px) {
+    &{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      max-width: 100%;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 1.6rem;
+    }
+  }
 `
