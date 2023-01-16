@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Header from "./components/Header"
 import Challenge02 from "./pages/Challenge02"
+import Challenges from "./pages/Challenges"
 import Home from "./pages/Home"
 
 const links = [
   <Link to="/">Home</Link>,
-  <Link to="/challenges/02">Challenge 02</Link>
+  <Link to="/challenges">Challenges</Link>
 ]
 
 function App() {
@@ -16,8 +17,8 @@ function App() {
         <Header items={links} />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/challenges" element={<Challenges />} />
           <Route path="/challenges/02" element={<Challenge02 />} />
-
         </Routes>
       </BrowserRouter>
     </div>
