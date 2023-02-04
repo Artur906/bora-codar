@@ -1,10 +1,7 @@
 import { Container } from "../../../common/styled";
 import Button from "./components/Button";
+import { keyData } from "./keyData";
 import { Calculator, Card, Keys, Screen } from "./styled";
-
-const buttons = [
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-]
 
 export default function Challenge05() {
   return (
@@ -15,8 +12,8 @@ export default function Challenge05() {
 
           </Screen>
           <Keys className="buttons">
-            {buttons.map(button => {
-              return <Button value={button} />
+            {keyData.map((data, index) => {
+              return <Button key={data.value + index} value={data.value} />
             })}
           </Keys>
         </Calculator>

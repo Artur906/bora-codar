@@ -17,7 +17,9 @@ export const Calculator = styled.div`
   border-radius: 4rem;
   padding: 3.2rem;
 
-  box-shadow: 0 8px 17px rgb(0, 0, 0, .27), inset 0px 6px 8px rgb(255, 255, 255, .10), 0 30px 30px rgb(0, 0, 0, .27);
+  box-shadow: 0 8px 17px rgb(0, 0, 0, .27), 
+              inset 0px 6px 8px rgb(255, 255, 255, .10), 
+              0 30px 30px rgb(0, 0, 0, .27);
 
   display: flex;
   flex-direction: column;

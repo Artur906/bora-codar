@@ -10,6 +10,7 @@ export default function Challenges() {
         challenges.map(challenge => {
           return (
             <ChallengeCard
+              key={challenge.challengeLink}
               challengeLink={challenge.challengeLink}
               imgPath={challenge.imgPath}
               title={challenge.title}
