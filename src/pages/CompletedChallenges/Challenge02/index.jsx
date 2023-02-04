@@ -1,4 +1,4 @@
-import { Container } from "../../common/styled"
+import { Container } from "../../../common/styled"
 import { Card } from "./styled"
 import Info from "./components/Info"
 import Product from "./components/Product"
