@@ -13,7 +13,7 @@ export default function Challenge05() {
           </Screen>
           <Keys className="buttons">
             {keyData.map((data, index) => {
-              return <Button key={data.value + index} value={data.value} />
+              return <Button key={data.value + index} value={data.value} type={data.type} />
             })}
           </Keys>
         </Calculator>
