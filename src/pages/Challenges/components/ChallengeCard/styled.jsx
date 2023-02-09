@@ -25,6 +25,7 @@ export const CardImg = styled.img`
   border-radius: 1.6rem;
   padding: 1rem;
   z-index: 10;
+  height: 17.3rem;
 `
 
 export const CardDescrition = styled.div`

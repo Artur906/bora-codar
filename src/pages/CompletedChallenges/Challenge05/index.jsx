@@ -6,7 +6,7 @@ import { Calculator, Card, Keys, Screen } from "./styled";
 import equals from "./assets/result-equal.svg"
 
 export default function Challenge05() {
-  const [expression, setExpression] = useState('12 + 54 - 125')
+  const [expression, setExpression] = useState('')
   const [result, setResult] = useState()
 
   const actions = {
