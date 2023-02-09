@@ -8,7 +8,8 @@ export const StyledButton = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 2.4rem;
-
+  font-family: 'Rubik', sans-serif;
+  
   box-shadow: 0 2px 4px rgb(0, 0, 0, .27), 
               inset 0px 2px 3px rgb(255, 255, 255, .10),
               0 15px 30px rgb(0, 0, 0, .27);

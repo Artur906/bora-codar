@@ -9,88 +9,104 @@ import equals from './assets/equals.svg'
 export const keyData = [
   {
     value: 'CE',
-    action: 'clear everithing',
+    action: 'clearEntry',
   },
   {
     value: 'C',
     action: 'clear'
   },
   {
-    value: percent,
-    action: 'percent',
+    value: '%',
+    path: percent,
+    action: 'placeCharacter',
     type: 'svg'
   },
   {
-    value: divide,
-    action: 'divide',
+    value: '/',
+    path: divide,
+    action: 'placeCharacter',
     type: 'svg'
   },
   {
     value: 7,
+    action: 'placeCharacter',
     type: 'number'
   },
   {
     value: 8,
+    action: 'placeCharacter',
     type: 'number'
   },
   {
     value: 9,
+    action: 'placeCharacter',
     type: 'number'
   },
   {
-    value: X,
-    action: 'multiply',
+    value: '*',
+    path: X,
+    action: 'placeCharacter',
     type: 'svg'
   },
   {
     value: 4,
+    action: 'placeCharacter',
     type: 'number'
   },
   {
     value: 5,
+    action: 'placeCharacter',
     type: 'number'
   },
   {
     value: 6,
+    action: 'placeCharacter',
     type: 'number'
   },
   {
-    value: minus,
-    action: 'minus',
+    value: '-',
+    path: minus,
+    action: 'placeCharacter',
     type: 'svg'
   },
   {
     value: 1,
+    action: 'placeCharacter',
     type: 'number'
   },
   {
     value: 2,
+    action: 'placeCharacter',
     type: 'number'
   },
   {
     value: 3,
+    action: 'placeCharacter',
     type: 'number'
   },
   {
-    value: plus,
-    action: 'plus',
+    value: '+',
+    path: plus,
+    action: 'placeCharacter',
     type: 'svg'
   },
   {
-    value: plusMinus,
-    action: 'plusMinus',
+    path: plusMinus,
+    action: 'invertSignal',
     type: 'svg'
   },
   {
     value: 0,
+    action: 'placeCharacter',
     type: 'number'
   },
   {
-    value: ',',
-    type: 'character'
+    value: '.',
+    action: 'placeCharacter',
+    type: 'number'
   },
   {
-    value: equals,
+    path: equals,
     action: 'equals',
     type: 'svg'
   },

@@ -1,13 +1,19 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
+  @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+  
   height: max-content;
   width: 100%;
-  background: #807ECE;
   padding: 4rem 0;
+  border-radius: .8rem;
+  background: #807ECE;
+
   display: flex;
   justify-content: center;
-  border-radius: .8rem;
+
+  font-family: 'Rubik', sans-serif;
+  
 `
 
 export const Calculator = styled.div`
@@ -16,6 +22,7 @@ export const Calculator = styled.div`
   background: #2D2A37;
   border-radius: 4rem;
   padding: 3.2rem;
+  padding-top: 5.3rem;
 
   box-shadow: 0 8px 17px rgb(0, 0, 0, .27), 
               inset 0px 6px 8px rgb(255, 255, 255, .10), 
@@ -23,13 +30,34 @@ export const Calculator = styled.div`
 
   display: flex;
   flex-direction: column;
+  justify-content: end;
   row-gap: 2.6rem;
 `
 
 export const Screen = styled.div`
   display: flex;
   flex-direction: column;
-  flex: 1;
+  text-align: right;
+  padding: 0 2.2rem;
+
+  .expression {
+    font-size: 2rem;
+    line-height: 2.8rem;
+    color: #6B6B6B;
+  }
+
+  .result {
+    height: 5rem;
+    font-size: 3.6rem;
+    line-height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    
+    span {
+      flex: 1;
+      text-overflow: clip;
+    }
+  }
 `
 
 export const Keys = styled.div`
@@ -38,6 +66,4 @@ export const Keys = styled.div`
   align-items: center;
   gap: 1.2rem;
   justify-content: center;
-
-  
 `
