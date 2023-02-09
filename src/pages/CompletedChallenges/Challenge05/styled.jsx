@@ -52,11 +52,6 @@ export const Screen = styled.div`
     line-height: 5rem;
     display: flex;
     justify-content: space-between;
-    
-    span {
-      flex: 1;
-      text-overflow: clip;
-    }
   }
 `
 
