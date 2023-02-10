@@ -10,6 +10,7 @@ export const keyData = [
   {
     value: 'CE',
     action: 'clearEntry',
+    color: '#975DFA'
   },
   {
     value: 'C',
@@ -25,6 +26,7 @@ export const keyData = [
     value: '/',
     path: divide,
     action: 'placeCharacter',
+    background: '#462878',
     type: 'svg'
   },
   {
@@ -46,6 +48,7 @@ export const keyData = [
     value: '*',
     path: X,
     action: 'placeCharacter',
+    background: '#462878',
     type: 'svg'
   },
   {
@@ -67,6 +70,7 @@ export const keyData = [
     value: '-',
     path: minus,
     action: 'placeCharacter',
+    background: '#462878',
     type: 'svg'
   },
   {
@@ -88,6 +92,7 @@ export const keyData = [
     value: '+',
     path: plus,
     action: 'placeCharacter',
+    background: '#462878',
     type: 'svg'
   },
   {
@@ -108,6 +113,7 @@ export const keyData = [
   {
     path: equals,
     action: 'equals',
+    background: '#7F45E2',
     type: 'svg'
   },
 ]

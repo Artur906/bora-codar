@@ -67,6 +67,8 @@ export default function Challenge05() {
                   path={data.path}
                   value={data.value}
                   type={data.type}
+                  color={data.color}
+                  background={data.background}
                   callback={() => actions[data.action](data.value, data.type)}
                 />
               )
