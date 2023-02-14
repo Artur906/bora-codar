@@ -1,6 +1,11 @@
 import styled from "styled-components"
 
-export const StyledButton = styled.div`
+interface styledButtonProps {
+  background?: string,
+  color?: string
+}
+
+export const StyledButton = styled.div<styledButtonProps>`
   width: 6.4rem;
   height: 6.4rem;
   border-radius: 50px;
@@ -8,7 +13,6 @@ export const StyledButton = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 2.4rem;
-  font-family: 'Rubik', sans-serif;
   background-color: ${props => props.background ?? ''};
   
   box-shadow: 0 2px 4px rgb(0, 0, 0, .27), 

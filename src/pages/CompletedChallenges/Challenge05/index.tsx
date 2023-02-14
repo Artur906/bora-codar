@@ -5,12 +5,20 @@ import { keyData } from "./keyData";
 import { Calculator, Card, Keys, Screen } from "./styled";
 import equals from "./assets/result-equal.svg"
 
-export default function Challenge05() {
-  const [expression, setExpression] = useState('')
-  const [result, setResult] = useState()
+interface Actions {
+  [actionName : string]: object,
+  placeCharacter(character: string | number, type: string): void,
+  clear(): void,
+  clearEntry(): void,
+  equals(): void,
+}
 
-  const actions = {
-    placeCharacter: (character, type) => {
+export default function Challenge05() {
+  const [expression, setExpression] = useState<string>('')
+  const [result, setResult] = useState<number | null>()
+
+  const actions: Actions = {
+    placeCharacter: (character: string, type: string): void => {
       setExpression(lastExpression => {
         const splitedExpression = expression.trim()
         const lastPosition = splitedExpression.length - 1
@@ -22,12 +30,13 @@ export default function Challenge05() {
         }
         return lastExpression
       })
+      return
     },
-    clear: () => {
+    clear: (): void => {
       setExpression('')
-      setResult()
+      setResult(null)
     },
-    clearEntry: () => {
+    clearEntry: (): void => {
       setExpression(lastExpression => {
         if (lastExpression[lastExpression.length - 1] === ' ') {
           return lastExpression.slice(0, -2)
@@ -35,16 +44,32 @@ export default function Challenge05() {
         return lastExpression.slice(0, -1)
       })
     },
-    equals: () => {
+    equals: (): void => {
       setResult(() => {
         try {
-          return eval(expression)
+          return eval(expression);
         } catch (err) {
-          return 'ups..'
+          return 'ups..';
         }
-      })
+      });
     }
   }
+
+  const handleActionSelection = (action: string, value?: string | number, type?: string) => {
+    if(action === 'placeCharacter' && (value || value === 0) && type){
+      return actions.placeCharacter(value, type)
+    }
+    if(action === 'clear'){
+      return actions.clear()
+    }
+    if(action === 'clearEntry'){
+      return actions.clearEntry()
+    }
+    if(action === 'equals') {
+      return actions.equals()
+    }
+  }
+
 
   return (
     <Container>
@@ -60,16 +85,16 @@ export default function Challenge05() {
             </div>
           </Screen>
           <Keys className="buttons">
-            {keyData.map((data, index) => {
+            {keyData.map((data) => {
               return (
                 <Button
-                  key={data.value ?? data.path + index}
+                  key={data.id}
                   path={data.path}
                   value={data.value}
                   type={data.type}
                   color={data.color}
                   background={data.background}
-                  callback={() => actions[data.action](data.value, data.type)}
+                  callback={() => handleActionSelection(data.action, data.value, data.type)}
                 />
               )
             })}
