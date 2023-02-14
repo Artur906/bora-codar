@@ -10,9 +10,9 @@ export default function Product() {
 
   return (
     <Aside>
-      <img src={isVisualisationActive ? sofaGirante : sofa} alt="" className="product-img" />
+      <img src={isVisualisationActive ? sofaGirante : sofa} alt="um sofá bem bonito, com uma cor rosada" className="product-img" />
       <button onClick={() => setIsVisualisationActice(!isVisualisationActive)}>
-        <img src={isVisualisationActive ? closeButton : button360} alt="" />
+        <img src={isVisualisationActive ? closeButton : button360} alt="um botão para mudar o tipo de visualização do produto" />
       </button>
     </Aside>
   )

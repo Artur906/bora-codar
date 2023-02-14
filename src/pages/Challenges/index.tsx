@@ -1,5 +1,5 @@
-import ChallengeCard from "./components/ChallengeCard";
-import { challenges } from "./listOfChallenges";
+import ChallengeCard, { ChallengeCardProps } from "./components/ChallengeCard";
+import { challenges } from "./listOfChallenges.js";
 import { ChallengesContainer } from "./styled";
 
 
@@ -7,7 +7,7 @@ export default function Challenges() {
   return (
     <ChallengesContainer>
       {
-        challenges.map(challenge => {
+        challenges.map((challenge: ChallengeCardProps) => {
           return (
             <ChallengeCard
               key={challenge.challengeLink}

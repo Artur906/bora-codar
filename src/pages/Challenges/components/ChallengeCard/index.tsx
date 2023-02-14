@@ -1,6 +1,13 @@
 import { Card, CardDescrition, CardImg } from "./styled";
 
-export default function ChallengeCard({ imgPath, title, description, challengeLink }) {
+export interface ChallengeCardProps {
+  imgPath: string,
+  title: string,
+  description: string,
+  challengeLink: string,
+}
+
+export default function ChallengeCard({ imgPath, title, description, challengeLink }: ChallengeCardProps) {
   return (
     <Card to={challengeLink}>
       <CardImg src={imgPath} />
